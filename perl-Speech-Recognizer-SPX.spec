@@ -1,6 +1,7 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_with	tests	# perform "make test"
+			# need working audio device access
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Speech
@@ -10,7 +11,8 @@ Summary(pl):	Modu³ perla Speech::Recognizer::SPX - dowi±zania do Sphinx-II
 Name:		perl-Speech-Recognizer-SPX
 Version:	0.0602
 Release:	3
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	6cbef3f8d0f2dfefcbdec1d36abb2b17
@@ -37,7 +39,6 @@ mowy Sphinx-II.
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
 
-# one of tests fails - check again
 %{?with_tests:%{__make} test}
 
 %install
