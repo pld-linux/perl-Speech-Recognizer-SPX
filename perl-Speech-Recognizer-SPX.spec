@@ -8,12 +8,12 @@ Summary:	Speech::Recognizer::SPX Perl module - bindings for Sphinx-II
 Summary(pl):	Modu³ perla Speech::Recognizer::SPX - dowi±zania do Sphinx-II
 Name:		perl-Speech-Recognizer-SPX
 Version:	0.0602
-Release:	2
+Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	sphinx2-devel
 Provides:	perl(Speech::Recognizer::SPX::Config)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,7 +30,8 @@ mowy Sphinx-II.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 # one of tests fails
@@ -48,13 +49,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitearch}/Audio/*.pm
-%{perl_sitearch}/Speech/Recognizer/SPX.pm
-%{perl_sitearch}/Speech/Recognizer/SPX
-%dir %{perl_sitearch}/auto/Audio/*
-%{perl_sitearch}/auto/Audio/*/*.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Audio/*/*.so
-%dir %{perl_sitearch}/auto/Speech/Recognizer/SPX
-%{perl_sitearch}/auto/Speech/Recognizer/SPX/*.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Speech/Recognizer/SPX/*.so
+%{perl_vendorarch}/Audio/*.pm
+%{perl_vendorarch}/Speech/Recognizer/SPX.pm
+%{perl_vendorarch}/Speech/Recognizer/SPX
+%dir %{perl_vendorarch}/auto/Audio/*
+%{perl_vendorarch}/auto/Audio/*/*.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Audio/*/*.so
+%dir %{perl_vendorarch}/auto/Speech/Recognizer/SPX
+%{perl_vendorarch}/auto/Speech/Recognizer/SPX/*.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Speech/Recognizer/SPX/*.so
 %{_mandir}/man3/*
