@@ -34,7 +34,7 @@ mowy Sphinx-II.
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 # one of tests fails
-#%{!?_without_tests:%{__make} test}
+#%%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
