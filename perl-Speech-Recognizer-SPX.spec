@@ -10,7 +10,7 @@ Summary:	Speech::Recognizer::SPX Perl module - bindings for Sphinx-II
 Summary(pl):	Modu³ perla Speech::Recognizer::SPX - dowi±zania do Sphinx-II
 Name:		perl-Speech-Recognizer-SPX
 Version:	0.0602
-Release:	3
+Release:	4
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
