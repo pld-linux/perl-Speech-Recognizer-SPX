@@ -4,8 +4,8 @@
 			# need working audio device access
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Speech
-%define		pnam	Recognizer-SPX
+%define	pdir	Speech
+%define	pnam	Recognizer-SPX
 Summary:	Speech::Recognizer::SPX Perl module - bindings for Sphinx-II
 Summary(pl):	Modu³ perla Speech::Recognizer::SPX - dowi±zania do Sphinx-II
 Name:		perl-Speech-Recognizer-SPX
