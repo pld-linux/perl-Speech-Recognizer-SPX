@@ -7,7 +7,7 @@
 %define		pdir	Speech
 %define		pnam	Recognizer-SPX
 Summary:	Speech::Recognizer::SPX Perl module - bindings for Sphinx-II
-Summary(pl.UTF-8):   Moduł perla Speech::Recognizer::SPX - dowiązania do Sphinx-II
+Summary(pl.UTF-8):	Moduł perla Speech::Recognizer::SPX - dowiązania do Sphinx-II
 Name:		perl-Speech-Recognizer-SPX
 Version:	0.0602
 Release:	4
