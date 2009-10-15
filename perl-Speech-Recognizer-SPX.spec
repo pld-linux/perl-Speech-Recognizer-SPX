@@ -9,13 +9,13 @@
 Summary:	Speech::Recognizer::SPX Perl module - bindings for Sphinx-II
 Summary(pl.UTF-8):	Moduł Perla Speech::Recognizer::SPX - dowiązania do Sphinx-II
 Name:		perl-Speech-Recognizer-SPX
-Version:	0.0602
-Release:	4
+Version:	0.0801
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Speech/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	6cbef3f8d0f2dfefcbdec1d36abb2b17
+# Source0-md5:	7562fb69c09447fecd6e3e3343f906f5
 URL:		http://search.cpan.org/dist/Speech-Recognizer-SPX/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -36,7 +36,8 @@ mowy Sphinx-II.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
+	INSTALLDIRS=vendor \
+	--sphinx-prefix=/usr
 %{__make} \
 	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
