@@ -60,9 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Speech/Recognizer/SPX.pm
 %{perl_vendorarch}/Speech/Recognizer/SPX
 %dir %{perl_vendorarch}/auto/Audio/*
-%{perl_vendorarch}/auto/Audio/*/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Audio/*/*.so
 %dir %{perl_vendorarch}/auto/Speech/Recognizer/SPX
-%{perl_vendorarch}/auto/Speech/Recognizer/SPX/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Speech/Recognizer/SPX/*.so
 %{_mandir}/man3/*
