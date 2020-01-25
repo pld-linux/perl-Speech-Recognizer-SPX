@@ -3,7 +3,6 @@
 %bcond_with	tests	# perform "make test"
 			# need working audio device access
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Speech
 %define		pnam	Recognizer-SPX
 Summary:	Speech::Recognizer::SPX Perl module - bindings for Sphinx-II
